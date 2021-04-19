@@ -1,0 +1,19 @@
+﻿@model ViewKorzinaModel
+<div class="container">
+    @foreach (var el in Model.viewkorzina.spisokdannix)
+    {
+       <br> <div class=" alert alert-danger mb-5" role="banner" >
+                <div class="container mb-1 mt-4">
+                    <img class="img-thumbnail" src="@el.Image" alt="@el.Cars.Image" width="190" height="300" align="right" />
+                    <h5><b>Автомобиль:</b> @el.Cars.Name<br></h5>
+                    <h5><b>Цена:</b> @el.Cars.Price<br /></h5>
+                    <a class="btn btn-danger mb-2" asp-controller="Zakaz" asp-action="Checkout">Оплатить</a>
+                    
+                </div>
+           
+        </div>
+    }
+    <hr />
+    <a class="btn btn-danger mb-5" asp-controller="Zakaz" asp-action="Checkout">Оплатить</a>
+
+</div>

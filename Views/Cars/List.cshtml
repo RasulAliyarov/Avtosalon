@@ -1,0 +1,11 @@
+﻿   @using Avtosolon.Data.Models
+<h2>   <br />@Model.somestring</h2>
+    <div class="row mt-5 mb-2">
+        @{
+            foreach (InfoCar el in Model.info)
+            {
+                @Html.Partial("AllCars", el)
+           
+            }
+        }
+    </div>

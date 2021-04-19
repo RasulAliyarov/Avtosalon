@@ -1,0 +1,9 @@
+﻿@model InfoCar
+<div class="col-lg-4 ">
+    <img class="img-thumbnail" src="@Model.Image" alt="@Model.Name"  />
+    <h3>Модель: @Model.Name </h3>
+    <h3>Цена: @Model.Price $</h3>
+    <a class="btn btn-warning" href="#"> Подробнее</a>
+    <a class="btn btn-info" asp-controller="Korzina" asp-action="pereadressaciya" asp-route-id="@Model.Id"> Добавить в корзину</a>
+    <a class="btn btn-danger" asp-controller="Zakaz" asp-action="Checkout">Оплатить</a>
+</div>
